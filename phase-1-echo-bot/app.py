@@ -25,9 +25,7 @@ def build_echo(message: str) -> dict:
 
     Must return exactly ``{"echo": <message>, "length": <len of message>}``.
     """
-    # TODO: return {"echo": message, "length": len(message)}
-    raise NotImplementedError("Phase 1: implement build_echo()")
-
+    return {"echo": message, "length": len(message)}
 
 def extract_message(args, json_body) -> str | None:
     """Pull the user's message out of a request.
@@ -39,9 +37,14 @@ def extract_message(args, json_body) -> str | None:
         args: request.args (a mapping with ``.get``), e.g. ``{"msg": "hi"}``.
         json_body: parsed JSON body or ``None``, e.g. ``{"message": "hi"}``.
     """
-    # TODO: return args["msg"] if present, else json_body["message"] if present,
-    #       else None. Use .get() so missing keys don't raise.
-    raise NotImplementedError("Phase 1: implement extract_message()")
+
+    if "msg" in args:
+        return args.get("msg")
+
+    if isinstance(json_body, dict):
+        return json_body.get("message")
+
+    return None
 
 
 # --------------------------------------------------------------------------- #
