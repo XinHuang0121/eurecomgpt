@@ -1,0 +1,30 @@
+{
+  "phase": "2",
+  "environment": {
+    "colab": true
+  },
+  "attention": {
+    "naive_ms": 256.811,
+    "vectorized_ms": 1.056,
+    "speedup": 243.19
+  },
+  "threads": {
+    "1": 2686.569,
+    "2": 2141.014,
+    "4": 2237.639,
+    "8": 2736.65
+  },
+  "devices": {
+    "cpu_ms": 426650.4,
+    "gpu_ms": 13038.6
+  },
+  "training": {
+    "steps": 2000,
+    "final_loss": 1.4578,
+    "param_count": 4935680
+  },
+  "sample": "\nFis our unto toward,\nOn I fear furing ather one thoughtst!\nGet tently whither? What shalt's tear one!\n\nPRINCE EDWARD:\nWhy, was you brank'd you no stattlest tongue\nNor proud me for worthy grounden thee",
+  "model": {
+    "gcs_url": "https://storage.googleapis.com/eurecomgpt-lab-eurecomgpt/model.safetensors"
+  }
+}
